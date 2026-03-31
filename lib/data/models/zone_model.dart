@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'metric_model.dart';
 
 part 'zone_model.freezed.dart';
@@ -12,6 +13,7 @@ class ZoneModel with _$ZoneModel {
     required String name,
     required MetricModel primaryMetric,
     required List<MetricModel> metrics,
+
     /// 4 data points used for the sparkline chart
     required List<double> weeklyTrend,
   }) = _ZoneModel;

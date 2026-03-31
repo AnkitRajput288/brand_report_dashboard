@@ -40,7 +40,8 @@ class BrandReportScreen extends ConsumerWidget {
                   ref.read(brandReportNotifierProvider.notifier).refresh(),
             ),
           IconButton(
-            icon: Icon(isDark ? Icons.light_mode_rounded : Icons.dark_mode_rounded),
+            icon: Icon(
+                isDark ? Icons.light_mode_rounded : Icons.dark_mode_rounded),
             tooltip: isDark ? 'Switch to light theme' : 'Switch to dark theme',
             onPressed: () {
               ref.read(themeModeProvider.notifier).state =
@@ -83,8 +84,7 @@ class BrandReportScreen extends ConsumerWidget {
             builder: (context, constraints) {
               final isTablet =
                   constraints.maxWidth > AppSpacing.kTabletBreakpoint;
-              final layout =
-                  isTablet ? LayoutMode.tablet : LayoutMode.mobile;
+              final layout = isTablet ? LayoutMode.tablet : LayoutMode.mobile;
 
               return SingleChildScrollView(
                 padding: const EdgeInsets.all(AppSpacing.md),
@@ -147,4 +147,3 @@ class BrandReportScreen extends ConsumerWidget {
     );
   }
 }
-

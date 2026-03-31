@@ -18,8 +18,10 @@ class BrandReport with _$BrandReport {
   const factory BrandReport({
     required int brandHealthScore,
     required List<ZoneModel> zones,
+
     /// 8-week spend values in Rs
     required List<double> weeklySpend,
+
     /// 8-week ROAS values
     required List<double> weeklyRoas,
     required List<InsightModel> insights,

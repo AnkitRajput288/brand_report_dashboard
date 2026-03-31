@@ -23,6 +23,7 @@ class MetricModel with _$MetricModel {
   const factory MetricModel({
     required String label,
     required double value,
+
     /// Positive = improvement, negative = decline (percentage points)
     required double changePct,
   }) = _MetricModel;

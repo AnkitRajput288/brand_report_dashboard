@@ -1,12 +1,11 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
-
 import 'package:brand_report_dashboard/data/models/brand_report.dart';
 import 'package:brand_report_dashboard/data/models/channel_mix_model.dart';
 import 'package:brand_report_dashboard/data/repositories/brand_report_repository.dart';
 import 'package:brand_report_dashboard/data/repositories/brand_report_repository_provider.dart';
 import 'package:brand_report_dashboard/features/brand_report/providers/brand_report_provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
 
 class MockBrandReportRepository extends Mock implements BrandReportRepository {}
 
@@ -70,7 +69,8 @@ void main() {
   });
 
   test('error state is propagated when repository throws', () async {
-    when(() => mockRepo.fetchBrandReport()).thenThrow(Exception('network error'));
+    when(() => mockRepo.fetchBrandReport())
+        .thenThrow(Exception('network error'));
 
     final errorContainer = ProviderContainer(
       overrides: [

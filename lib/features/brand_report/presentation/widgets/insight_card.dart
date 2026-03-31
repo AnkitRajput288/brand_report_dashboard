@@ -77,8 +77,10 @@ class InsightCard extends StatelessWidget {
           subtitle: Text(
             insight.body,
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color:
-                      Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.65),
+                  color: Theme.of(context)
+                      .colorScheme
+                      .onSurface
+                      .withValues(alpha: 0.65),
                 ),
             maxLines: 2,
             overflow: TextOverflow.ellipsis,

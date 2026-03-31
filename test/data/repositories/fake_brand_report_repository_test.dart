@@ -1,6 +1,5 @@
-import 'package:flutter_test/flutter_test.dart';
-
 import 'package:brand_report_dashboard/data/repositories/fake_brand_report_repository.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 // No-op connectivity check — avoids platform channel calls in unit tests.
 Future<void> _noOpConnectivity() async {}
@@ -13,7 +12,8 @@ void main() {
       repo = FakeBrandReportRepository(connectivityCheck: _noOpConnectivity);
     });
 
-    test('fetchBrandReport() returns a valid BrandReport with 5 zones', () async {
+    test('fetchBrandReport() returns a valid BrandReport with 5 zones',
+        () async {
       final report = await repo.fetchBrandReport();
 
       expect(report.brandHealthScore, equals(74));
@@ -23,7 +23,8 @@ void main() {
       expect(report.weeklyRoas.length, equals(8));
     });
 
-    test('fetchBrandReport() completes in >= 400ms (simulates delay)', () async {
+    test('fetchBrandReport() completes in >= 400ms (simulates delay)',
+        () async {
       final stopwatch = Stopwatch()..start();
       await repo.fetchBrandReport();
       stopwatch.stop();
@@ -42,8 +43,8 @@ void main() {
 
     test('channel mix segments sum to 100', () async {
       final report = await repo.fetchBrandReport();
-      final total = report.channelMix.segments.values
-          .reduce((sum, v) => sum + v);
+      final total =
+          report.channelMix.segments.values.reduce((sum, v) => sum + v);
       expect(total, equals(100));
     });
 

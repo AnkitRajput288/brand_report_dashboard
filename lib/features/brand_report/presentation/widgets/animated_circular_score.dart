@@ -79,7 +79,8 @@ class _AnimatedCircularScoreState extends State<AnimatedCircularScore>
                 painter: _ScoreArcPainter(
                   progress: _progress.value,
                   color: color,
-                  trackColor: Theme.of(context).colorScheme.surfaceContainerHighest,
+                  trackColor:
+                      Theme.of(context).colorScheme.surfaceContainerHighest,
                 ),
               ),
               Column(

@@ -19,6 +19,7 @@ class ZoneCard extends StatefulWidget {
 
   final ZoneModel zone;
   final VoidCallback onTap;
+
   /// When true the card fills its parent (grid cell). When false a fixed
   /// 160px width is used for the horizontal scroll layout.
   final bool expanded;
@@ -140,7 +141,10 @@ class _TrendArrow extends StatelessWidget {
     final trend = metric.trend;
     final (icon, color) = switch (trend) {
       TrendDirection.up => (Icons.arrow_upward_rounded, AppColors.trendUp),
-      TrendDirection.down => (Icons.arrow_downward_rounded, AppColors.trendDown),
+      TrendDirection.down => (
+          Icons.arrow_downward_rounded,
+          AppColors.trendDown
+        ),
       TrendDirection.flat => (Icons.remove_rounded, AppColors.trendFlat),
     };
 

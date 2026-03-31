@@ -37,7 +37,8 @@ class ChannelMixChart extends ConsumerWidget {
             final entry = e.value;
             final isSelected = selected == entry.key;
             return PieChartSectionData(
-              color: AppColors.chartPalette[index % AppColors.chartPalette.length],
+              color:
+                  AppColors.chartPalette[index % AppColors.chartPalette.length],
               value: entry.value,
               title: isSelected ? '' : '${entry.value.toInt()}%',
               radius: isSelected ? 60 : 50,
