@@ -1,0 +1,59 @@
+name: brand_report_dashboard
+description: "Evernine Brands — AI Marketing OS Dashboard"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # State Management
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+  hooks_riverpod: ^2.5.1
+
+  # Code Generation (runtime annotations)
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.9.0
+
+  # Charts
+  fl_chart: ^0.68.0
+
+  # Navigation
+  go_router: ^14.2.0
+
+  # UI / Utilities
+  shimmer: ^3.0.0
+  cached_network_image: ^3.3.1
+  gap: ^3.0.1
+  intl: ^0.19.0
+
+  # Logging
+  logger: ^2.4.0
+
+  # Connectivity
+  connectivity_plus: ^6.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+  # Code Generation
+  build_runner: ^2.4.9
+  riverpod_generator: ^2.4.0
+  freezed: ^2.5.2
+  json_serializable: ^6.8.0
+
+  # Testing
+  mocktail: ^1.0.3
+
+flutter:
+  uses-material-design: true

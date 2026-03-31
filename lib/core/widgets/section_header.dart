@@ -1,0 +1,19 @@
+import 'package:flutter/material.dart';
+
+/// A standardised dashboard section title widget.
+class SectionHeader extends StatelessWidget {
+  const SectionHeader(this.title, {super.key});
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      title,
+      style: Theme.of(context)
+          .textTheme
+          .titleMedium
+          ?.copyWith(fontWeight: FontWeight.bold),
+    );
+  }
+}
